@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<style>
+body {
+	background-image: url("customer3.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.header {
+	color: white;
+}
+
+p {
+	color: white;
+}
+</style>
+
+<title>Create Customer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="header">
+		<h1>Create Customer</h1>
+	</div>
+	
+	<p>To create a Customer you should fill in all the fields in the
+		form below:</p>
+
+	<form>
+		<div class="container"></div>
+		<div class="input-group">
+			<span class="input-group-addon">
+			<i class="glyphicon glyphicon-user"></i>
+			</span> 
+			<input data-ng-model="g.customer.id" id="id" type="text" class="form-control" name="id" placeholder="Id" required="required">
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon">
+			<i class="glyphicon glyphicon-user"></i>
+			</span> 
+			<input data-ng-model="g.customer.custName" id="custname" type="text" class="form-control" name="custName" placeholder="Customer Name" required="required">
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon">
+			<i class="glyphicon glyphicon-lock"></i>
+			</span> 
+			<input data-ng-model="g.customer.password" id="password" type="text" class="form-control" name="password" placeholder="Password" required="required">
+		</div>
+
+		<br>
+
+		<button class="button" data-ng-click="g.createCustomer()" class="w3-btn w3-light-grey w3-ripple" data-ng-disabled="error || incomplete">&#10004; Create Customer</button>
+		
+
+	</form>
+</body>
+</html>
+

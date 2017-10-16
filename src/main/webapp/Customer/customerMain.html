@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+<meta charset="windows-1255">
+
+<script src="angular.js"></script>
+<script src="angular-ui-router.js"></script>
+<script src="bootstrap.js"></script>
+
+<script src="RouteCustomerPage.js"></script>
+<script src="purchaseCoupon.js"></script>
+<script src="purchaseCoupon.service.js"></script>
+<script src="purchaseCoup.js"></script>
+<script src="allPurchaseCoupons.service.js"></script>
+<script src="allPurchaseCoupons.js"></script>
+<script src="allPurchCoupByType.service.js"></script>
+<script src="allPurchCoupByType.js"></script>
+<script src="allPurchCoupByPrice.service.js"></script>
+<script src="allPurchCoupByPrice.js"></script>
+
+<title>Customer Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#/">CouponSystem</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#/purchasecoupon">PurchaseCoupon</a></li>
+				<li class="active"><a href="#/allpurchcoup">GetAllPurchaseCoupons</a></li>
+				<li class="active"><a href="#/allpurchcoupbytype">GetAllPurchaseCouponsByType</a></li>
+				<li class="active"><a href="#/allpurchcoupbyprice">GetAllPurchaseCouponsByPrice</a></li>
+				
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				
+				<li><a href="http://localhost:8080/webcouponsystem/LogOut">
+				<span class="glyphicon glyphicon-log-out"></span>LogOut</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div data-ui-view></div>
+	</div>
+</body>
+</html>

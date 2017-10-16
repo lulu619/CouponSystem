@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<style>
+.header {
+	color: white;
+}
+
+p {
+	color: white;
+}
+</style>
+
+<title>Get Company</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="header">
+		<h1>Get Company</h1>
+	</div>
+
+	<p>To Get a Company you should fill in Company id:</p>
+
+	<form>
+		<div class="container"></div>
+		<div class="input-group">
+			<span class="input-group-addon">
+			<i class="glyphicon glyphicon-user"></i>
+			</span> 
+			<input data-ng-model="e.company.id" id="id" type="text" class="form-control" name="id" placeholder="Id" required="required">
+		</div>
+		<br>
+	
+		<button data-ng-click="e.getCompany()" class="w3-btn w3-light-grey w3-ripple" data-ng-disabled="error || incomplete">&#10004; Get Company</button>
+
+	</form>
+	
+		<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Company Name</th>
+				<th>Password</th>
+				<th>Email</th>
+				<th>Edit</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{ e.company.id }}</td>
+				<td>{{ e.company.compName }}</td>
+				<td>{{ e.company.password }}</td>
+				<td>{{ e.company.email }}</td>
+				
+				<td>
+					<button class="btn"
+						onClick="location.href='http://localhost:8080/webcouponsystem/Admin/adminMain.html#/updatecompany'">
+						<span class="glyphicon glyphicon-pencil"></span> Edit
+					</button>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+</body>
+</html>
+

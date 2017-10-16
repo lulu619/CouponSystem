@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<style>
+body {
+	background-image: url("allcomp.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.header {
+	color: white;
+}
+</style>
+<title>Get All Companies</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body>
+
+	<div class="header">
+		<h1>Get All Companies</h1>
+	</div>
+
+	<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Company ID</th>
+					<th>Company Name</th>
+					<th>Password</th>
+					<th>Email</th>
+					<th>Edit</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr data-ng-repeat="c in f.companies">
+					<td>{{ c.id }}</td>
+					<td>{{ c.compName }}</td>
+					<td>{{ c.password }}</td>
+					<td>{{ c.email }}</td>
+					<td>
+						<button onClick="location.href='http://localhost:8080/webcouponsystem/Admin/adminMain.html#/updatecompany'">
+							<span class="glyphicon glyphicon-pencil"></span> Edit</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<button onClick="location.href='http://localhost:8080/webcouponsystem/Admin/adminMain.html#/createcompany'">
+			<span class="glyphicon glyphicon-pencil"></span> Create New Company</button>
+		
+</body>
+</html>

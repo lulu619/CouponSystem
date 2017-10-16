@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<style>
+body {
+	background-image: url("wall04.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.header {
+	color: white;
+}
+
+p {
+	color: white;
+}
+
+.img {
+	margin: 1px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 50px;
+}
+</style>
+
+<title>Get Coupon</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="header">
+		<h1>Get Coupon</h1>
+	</div>	
+	
+	<p>To Get a Coupon you should fill in Coupon id:</p>
+
+	<form>
+		<div class="container"></div>
+		<div class="input-group">
+			<span class="input-group-addon">
+			<i class="glyphicon glyphicon-user"></i>
+			</span> 
+			<input data-ng-model="e.coupon.id" id="id" type="text" class="form-control" name="id" placeholder="Id" required="required">
+		</div>
+		<br>
+		
+		<button data-ng-click="e.getCoupon()" class="w3-btn w3-light-grey w3-ripple" data-ng-disabled="error || incomplete">&#10004; Get Coupon</button>
+
+	</form>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Title</th>
+				<th>Start Date</th>
+				<th>End Date</th>
+				<th>Amount</th>
+				<th>Type</th>
+				<th>Message</th>
+				<th>Price</th>
+				<th>Image</th>
+				<th>Edit</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{ e.coupon.id }}</td>
+				<td>{{ e.coupon.title }}</td>
+				<td>{{ e.coupon.startDate }}</td>
+				<td>{{ e.coupon.endDate }}</td>
+				<td>{{ e.coupon.amount }}</td>
+				<td>{{ e.coupon.type }}</td>
+				<td>{{ e.coupon.message }}</td>
+				<td>{{ e.coupon.price }}</td>
+				<td><img class="img" id="load" data-ng-src="{{e.coupon.image}}"/></td>
+				<td>
+					<button class="btn"
+						onClick="location.href='http://localhost:8080/webcouponsystem/Company/companyMain.html#/updatecoupon'">
+						<span class="glyphicon glyphicon-pencil"></span> Edit
+					</button>
+				</td>
+
+
+			</tr>
+
+		</tbody>
+	</table>
+</body>
+</html>
+

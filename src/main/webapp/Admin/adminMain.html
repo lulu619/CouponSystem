@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+<meta charset="windows-1255">
+<style>
+body {
+	background-image: url("admin3.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+</style>
+
+<script src="angular.js"></script>
+<script src="angular-ui-router.js"></script>
+<script src="bootstrap.js"></script>
+<script src="RouteAdminPage.js"></script>
+
+<script src="Company.js"></script>
+<script src="Customer.js"></script>
+
+<script src="createCompany.js"></script>
+<script src="deleteCompany.js"></script>
+<script src="updateCompany.js"></script>
+<script src="getCompany.js"></script>
+<script src="getAllCompanies.js"></script>
+
+<script src="createCustomer.js"></script>
+<script src="deleteCustomer.js"></script>
+<script src="updateCustomer.js"></script>
+<script src="getCustomer.js"></script>
+<script src="getAllCustomers.js"></script>
+
+<script src="createCompany.service.js"></script>
+<script src="deleteCompany.service.js"></script>
+<script src="updateCompany.service.js"></script>
+<script src="getCompany.service.js"></script>
+<script src="allCompanies.service.js"></script>
+
+<script src="createCustomer.service.js"></script>
+<script src="deleteCustomer.service.js"></script>
+<script src="updateCustomer.service.js"></script>
+<script src="getCustomer.service.js"></script>
+<script src="allCustomers.service.js"></script>
+
+<title>Administrator Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#/">CouponSystem</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#/createcompany">CreateCompany</a></li>
+				<li class="active"><a href="#/deletecompany">DeleteCompany</a></li>
+				<li class="active"><a href="#/updatecompany">UpdateCompany</a></li>
+				<li class="active"><a href="#/getcompany">GetCompany</a></li>
+				<li class="active"><a href="#/getallcompanies">AllCompanies</a></li>
+				<li class="active"><a href="#/createcustomer">CreateCustomer</a></li>
+				<li class="active"><a href="#/deletecustomer">DeleteCustomer</a></li>
+				<li class="active"><a href="#/updatecustomer">UpdateCustomer</a></li>
+				<li class="active"><a href="#/getcustomer">GetCustomer</a></li>
+				<li class="active"><a href="#/getallcustomers">AllCustomers</a></li>
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+
+				<li><a href="http://localhost:8080/webcouponsystem/LogOut"> <span class="glyphicon glyphicon-log-out"></span>LogOut
+				</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+
+		<div data-ui-view></div>
+
+
+	</div>
+</body>
+</html>

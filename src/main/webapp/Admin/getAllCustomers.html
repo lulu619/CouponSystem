@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	background-image: url("allcomp.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.header {
+	color: white;
+}
+</style>
+<title>Get All Customers</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body>
+
+	<div class="header">
+		<h1>Get All Customers</h1>
+	</div>
+
+	<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Customer ID</th>
+					<th>Customer Name</th>
+					<th>Password</th>
+					<th>Edit</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr data-ng-repeat="c in k.customers">
+					<td>{{ c.id }}</td>
+					<td>{{ c.custName }}</td>
+					<td>{{ c.password }}</td>
+					<td>
+						<button class="btn"
+							onClick="location.href='http://localhost:8080/webcouponsystem/Admin/adminMain.html#/updatecustomer'">
+							<span class="glyphicon glyphicon-pencil"></span> Edit
+						</button>
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+
+		<hr>
+
+		<button
+			onClick="location.href='http://localhost:8080/webcouponsystem/Admin/adminMain.html#/createcustomer'">
+			<span class="glyphicon glyphicon-pencil"></span> Create New Customer</button>
+			
+</body>
+</html>

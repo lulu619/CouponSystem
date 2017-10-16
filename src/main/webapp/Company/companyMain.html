@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+<meta charset="windows-1255">
+
+<script src="angular.js"></script>
+<script src="angular-ui-router.js"></script>
+<script src="bootstrap.js"></script>
+<script src="RouteCompanyPage.js"></script>
+
+<script src="coupon.js"></script>
+
+<script src="createCoupon.js"></script>
+<script src="deleteCoupon.js"></script>
+<script src="updateCoupon.js"></script>
+<script src="getCoupon.js"></script>
+<script src="getAllCoupons.js"></script>
+<script src="allCouponsByType.js"></script>
+<script src="allCouponsByPrice.js"></script>
+
+<script src="createCoupon.service.js"></script>
+<script src="deleteCoupon.service.js"></script>
+<script src="updateCoupon.service.js"></script>
+<script src="getCoupon.service.js"></script>
+<script src="allCoupons.service.js"></script>
+<script src="allCoupByType.service.js"></script>
+<script src="allCoupByPrice.service.js"></script>
+
+<title>Company Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#/">CouponSystem</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#/createcoupon">CreateCoupon</a></li>
+				<li class="active"><a href="#/deletecoupon">DeleteCoupon</a></li>
+				<li class="active"><a href="#/updatecoupon">UpdateCoupon</a></li>
+				<li class="active"><a href="#/getcoupon">GetCoupon</a></li>
+				<li class="active"><a href="#/getallcoupons">GetAllCoupons</a></li>
+				<li class="active"><a href="#/getallcoupbytype">GetAllCouponByType</a></li>
+				<li class="active"><a href="#/getallcoupbyprice">GetAllCouponByPrice</a></li>
+
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				
+				<li><a href="http://localhost:8080/webcouponsystem/LogOut">
+				<span class="glyphicon glyphicon-log-out"></span>LogOut</a></li>
+			</ul>
+			
+		</div>
+	</nav>
+
+	<div class="container">
+		<div data-ui-view></div>
+	</div>
+</body>
+</html>

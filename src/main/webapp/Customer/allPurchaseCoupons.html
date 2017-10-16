@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<style>
+
+body {
+	background-image: url("blue.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.header {
+color: white;
+}
+
+.img {
+	margin: 1px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 50px;
+}
+
+</style>
+<title>Get All Purchase Coupons</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body>
+
+		<div class="header">
+			<h1>Get All Purchase Coupons</h1>
+		</div>
+
+
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Title</th>
+					<th>Start Date</th>
+					<th>End Date</th>
+					<th>Amount</th>
+					<th>Type</th>
+					<th>Message</th>
+					<th>Price</th>
+					<th>image</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr data-ng-repeat="g in c.allPurchaseCoupons">
+					<td>{{ g.id }}</td>
+					<td>{{ g.title }}</td>
+					<td>{{ g.startDate }}</td>
+					<td>{{ g.endDate }}</td>
+					<td>{{ g.amount }}</td>
+					<td>{{ g.type }}</td>
+					<td>{{ g.message }}</td>
+					<td>{{ g.price }}</td>
+					<td><img class="img" id="load" data-ng-src="{{g.image}}"></td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+		<br>
+		<button onClick="location.href='http://localhost:8080/webcouponsystem/Customer/customerMain.html#/purchasecoupon'">
+			<span class="glyphicon glyphicon-pencil"></span> Purchase New Coupon </button>
+</body>
+</html>

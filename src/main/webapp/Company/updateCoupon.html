@@ -1,0 +1,104 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="windows-1255">
+<style>
+
+body {
+	background-image: url("wall03.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.header {
+	color: white;
+}
+
+p {
+	color: white;
+}
+
+</style>
+<title>Update Coupon</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>	
+	<div class="header">
+	<h1>Update Coupon:</h1>
+	</div>
+
+	<p>Enter the fields you want to update:</p>
+	
+	<form>
+		<div class="container"></div>
+		<div class="input-group">
+			<span class="input-group-addon">
+			<i class="glyphicon glyphicon-pencil"></i>
+			</span> 
+			<input data-ng-model="d.coupon.id" id="id" type="text" class="form-control" name="id" placeholder="Id" required="required">
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon">
+			<i class="glyphicon glyphicon-pencil"></i>
+			</span> 
+			<input data-ng-model="d.coupon.title" id="title" type="text" class="form-control" name="title" placeholder="Title">
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon">
+			<i class="glyphicon glyphicon-calendar"></i>
+			</span> 
+			<input data-ng-model="d.coupon.startDate" id="startDate" type="text" class="form-control" name="startDate" placeholder="Start Date">
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon">
+			<i class="glyphicon glyphicon-calendar"></i>
+			</span>
+				 <input data-ng-model="d.coupon.endDate" id="endDate" type="text" class="form-control" name="endDate" placeholder="End Date">
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon">
+			<i class="glyphicon glyphicon-asterisk"></i>
+			</span> 
+				<input data-ng-model="d.coupon.amount" id="amount" type="text" class="form-control" name="amount" placeholder="Amount">
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon">
+			<i class="glyphicon glyphicon-asterisk"></i>
+			</span> 
+			<input data-ng-model="d.coupon.type" id="type" type="text" class="form-control" name="type" placeholder="Type">
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon">
+			<i class="glyphicon glyphicon-envelope"></i>
+			</span> 
+			<input data-ng-model="d.coupon.message" id="message" type="text" class="form-control" name="message" placeholder="Message">
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-addon">
+			<i class="glyphicon glyphicon-usd"></i>
+			</span>
+			<input data-ng-model="d.coupon.price" id="price" type="text" class="form-control" name="price" placeholder="Price">
+		</div>
+
+		<br>
+		<button data-ng-click="d.updateCoupon()" class="w3-btn w3-light-grey w3-ripple" data-ng-disabled="error || incomplete">&#10004; Update Coupon</button>
+
+	</form>
+</body>
+</html>
+

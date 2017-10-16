@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<style>
+
+body {
+	background-image: url("blue1.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.header {
+	color: white;
+}
+
+.img {
+	margin: 1px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 50px;
+}
+
+</style>
+<title>Purchase Coupon</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="header">
+		<h1>Purchase Coupon</h1>
+	</div>	
+	
+	<p>In order to purchase a coupon please ensure you purchase a coupon that has not purchased,<br> you can check it out on the table,
+	<br>and then you should fill in Coupon id that you want to purchase:</p>
+ 
+	<form>
+		<div class="container"></div>
+		<div class="input-group">
+			<span class="input-group-addon">
+			<i class="glyphicon glyphicon-user"></i>
+			</span> 
+			<input data-ng-model="b.purchaseCoupon.id" id="id" type="text" class="form-control" name="id" placeholder="Id" required="required">
+		</div>
+		<br>
+		
+		<button data-ng-click="b.purchaseTheCoupon()" class="w3-btn w3-light-grey w3-ripple" data-ng-disabled="error || incomplete">&#10004; Purchase Coupon</button>
+
+		<br>
+		<br>
+			
+	</form>
+	
+	<div data-ng-controller="GetAllPurcCoupCtrl as main">
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Title</th>
+				<th>Start Date</th>
+				<th>End Date</th>
+				<th>Amount</th>
+				<th>Type</th>
+				<th>Message</th>
+				<th>Price</th>
+				<th>image</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr data-ng-repeat="g in main.allPurchaseCoupons">
+				<td>{{ g.id }}</td>
+				<td>{{ g.title }}</td>
+				<td>{{ g.startDate }}</td>
+				<td>{{ g.endDate }}</td>
+				<td>{{ g.amount }}</td>
+				<td>{{ g.type }}</td>
+				<td>{{ g.message }}</td>
+				<td>{{ g.price }}</td>
+				<td><img class="img" id="load" data-ng-src="{{g.image}}"></td>
+				<td>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+    </div>
+   
+    
+	
+</body>
+</html>
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<style>
+
+body {
+	background-image: url("blue2.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.header {
+color: white;
+}
+
+p {
+color: white; 
+}
+
+.img {
+	margin: 1px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 50px;
+}
+
+</style>
+<title>PurchaseCouponByPrice</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+   <div class="header">
+	<h1>Get Purchase Coupons By Price</h1>
+	</div>
+	
+	<p>To Get a Purchase Coupon by Price you should fill in Coupon Price:</p>
+
+	<form>
+		<div class="container">
+			<div class="input-group">
+				<span class="input-group-addon">
+				<i class="glyphicon glyphicon-usd"></i>
+				</span> 
+				<input data-ng-model="e.purchCoupByPrice.price" id="price" type="text" class="form-control" name="type" placeholder="Price" required="required">
+			</div>
+			<br>
+			
+			<button data-ng-click="e.getCouponByPrice()" class="w3-btn w3-light-grey w3-ripple" data-ng-disabled="error || incomplete">&#10004; Get Coupons</button>
+		</div>
+		
+		<br>
+		<br>
+		
+	</form>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Title</th>
+				<th>Start Date</th>
+				<th>End Date</th>
+				<th>Amount</th>
+				<th>Type</th>
+				<th>Message</th>
+				<th>Price</th>
+				<th>image</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr data-ng-repeat="c in e.purchCoupByPrice">
+				<td>{{ c.id }}</td>
+				<td>{{ c.title }}</td>
+				<td>{{ c.startDate }}</td>
+				<td>{{ c.endDate }}</td>
+				<td>{{ c.amount }}</td>
+				<td>{{ c.type }}</td>
+				<td>{{ c.message }}</td>
+				<td>{{ c.price }}</td>
+				<td><img class="img" id="load" data-ng-src="{{c.image}}"></td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>
+

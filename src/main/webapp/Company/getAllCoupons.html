@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1255">
+<style>
+
+body {
+	background-image: url("img123.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.header {
+color: white;
+}
+
+.img {
+	margin: 1px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 50px;
+}
+
+</style>
+<title>Get All Coupons</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body>
+
+		<div class="header">
+			<h1>Get All Coupons</h1>
+		</div>
+
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Title</th>
+					<th>Start Date</th>
+					<th>End Date</th>
+					<th>Amount</th>
+					<th>Type</th>
+					<th>Message</th>
+					<th>Price</th>
+					<th>image</th>
+					<th>Edit</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr data-ng-repeat="c in f.coupons">
+					<td>{{ c.id }}</td>
+					<td>{{ c.title }}</td>
+					<td>{{ c.startDate }}</td>
+					<td>{{ c.endDate }}</td>
+					<td>{{ c.amount }}</td>
+					<td>{{ c.type }}</td>
+					<td>{{ c.message }}</td>
+					<td>{{ c.price }}</td>
+					<td><img class="img" id="load" data-ng-src="{{c.image}}"></td>
+					<td>
+						<button class="btn" onClick="location.href='http://localhost:8080/webcouponsystem/Company/companyMain.html#/updatecoupon'">
+							<span class="glyphicon glyphicon-pencil"></span> Edit </button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+
+		<button onClick="location.href='http://localhost:8080/webcouponsystem/Company/companyMain.html#/createcoupon'">
+			<span class="glyphicon glyphicon-pencil"></span> Create New Coupon </button>
+</body>
+</html>
